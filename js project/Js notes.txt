@@ -1,0 +1,431 @@
+console type:
+
+console.log()---normal value print
+console.table()---it can be create a table
+	for example:   index    value
+			gopi	  1
+			sjnd	  112
+console.error()---identify a mistake
+console.warning()----it would be a warning
+console.time()---output valve run start time
+console.timeEnd()---output valve run end time
+
+
+
+var/let/const:
+
+
+var--globle scope
+for example:
+
+type1:
+
+if(true)				
+
+{
+var msg="welcome"
+
+}
+console.log(msg);
+-----------------------------------------
+
+type 2:
+
+if(true)				
+
+{
+var msg="welcome"
+
+console.log(msg);
+
+}
+
+
+var is used for console is given by inside the bracket either outlet bracket it can be run.
+
+
+let/const----block scope----is used for console is only given by inside the bracket it can be run.
+
+
+
+
+variable redecleration:
+
+var can be used to redecleration in a variable
+
+let/const cannot be redecleration in a variable
+
+
+
+data types:
+
+string
+int
+boolean
+null
+undefinded
+symbol---used as a unique valve 
+
+
+
+
+
+conditional chain-----multiple condition is given by one variable.
+
+syntax:
+const avg=75;
+const grade=avg>=90? "A grade":avg>=80?"B Grade":"C Grade";
+console.log("grade : ".grade);
+
+-----------------------------------------------------------------
+
+bitwise operators:
+
+2	0010
+3	0011
+4	0100
+5	0101
+
+-----------------------------------------------------------------------------------
+
+AND--- Two condition true .output valve is true
+	Any one condition false.output valve is false.
+
+
+OR--- any one condition true.output valve is true.
+
+
+-------------------------------------------------------------------------------------
+
+nullish coalescing operator  (??):
+
+const user={"name":"gopi"}
+console.log(user.name);
+
+console.log(city??="salem");
+
+console.log(user.city);
+
+
+this operator is using a undefinded is an convert by null fully.
+
+syntax:
+
+console.log(city??="salem");
+
+console.log(user.city);
+
+
+output:
+salem
+-----------------------------------------------------------------------------------
+++ and -- operator:
+
+postfix increment = a++
+prefix increment = ++a
+-----------------------------------------------------------------------
+
+switch statement:
+
+syntax:
+switch(choice)
+{
+    case choice :
+    -------
+     break;
+    case choice :
+    --------
+     break;
+    default:
+    -----
+    break;
+}
+------------------------------------------------------------------------
+
+math function in javascript:
+
+c= math.PI>>PIE VALVE
+c= math.E
+c= math.ROUND(5.8)>>6===>DECIMAL VALVE IT CAN ROUND THE VALUE
+c= math.FLOOR(5.8)>>5===> IT CAN BE REMOVE BY AFTER DECIMAL VALUE   
+c= math.CIEL(5.3)>>6===> IT CAN BE AFTER DECIMAL LARGEST VALUE
+c= math.SQRT(90)===>9.486===>SQUARE ROOT
+c= math.ABS(-85)>>85===> MINUES VALUE CHANGE BY POSITIVE VALUE
+c= math.TRUNC(2.58)>>2==>IT CAN BE TAKE AN INTGER VALUE 
+c= math.POW(2,4)>>(BASE VALUE,POWER VALUE)>>16
+c= math.MIN(10,50,40,57,60)
+c= math.MAX(10,50,40,57,60)
+c= math.SIN(45)
+c= math.COS(45)
+c= math.LOG2(45)
+c= math.LOG10(45)
+----------------------------------------------------------------------
+STRING FUNCTION:
+
+CONCATENATION>>>>TWO STRING JOIN INTO SINGLE STRING IS CALLED CONCATENATION.
+
+//append--c="tutor "
+	c+="joes"
+	console.log("append : "+c);
+	output: tutor joes
+----------------------------------------------------------
+EXAMPLE  VARIABLE ( C="WELCOME" )
+
+
+charAt--store in index value
+charCodeAt--askey value
+substr(from , to)--(0,4)
+
+
+// replace--
+a="i am from salem";
+console.log("before replace :"+a);
+
+replace by salem:
+
+c=a.replace('salem','chennai');
+console.log("after replace :"+c);
+
+output: i am from chennai
+
+
+//trim---
+remove unwanted space in variable 
+
+for examaple:
+c=" gopi "
+console.log("before trim :"+c);
+c=c.trim();
+console.log("after trim :"+c);
+
+
+//fromCharCode()----
+askey values is convert into words.
+
+------------------------------------------------------------------------
+//function with arbitary arguments
+
+function sum()
+{
+	let total=0;
+	for(let i=0; i<argument.length; i++);
+		total+=arguments[i];
+
+}
+
+	return total;
+console.log(sum(12,12));
+console.log(sum(12,12,12,12));
+
+------------------------------------------------------
+//arrow function
+
+const add=(a,b)=>{ return a+b; };
+console.log(add(25,78));
+
+
+type-1---//arrow function with map()-----
+
+let numbers=[1,2,3,4,5]
+console.log(numbers);
+let doublenumbers=numbers.map(numbers=>numbers*2);
+console.log(doublenumbers);
+
+
+type-2---//arrow function with filter()----
+
+let words=['apple','banana','orange','grape'];
+console.log(words);
+let filterwords=words.filter(words=>word.length>5);
+consoe.log(filterwords);
+
+
+type 3 //arrow function with reduce()----
+
+let numbers=[1,2,3,4,5];
+console.log(numbers);
+let total=numbers.reduce((sum,number)=>sum+number,0);
+console.log(total);
+
+type 4 //arrow function to create a closure()---
+
+let createcounter=()=>{
+	let count=0;
+	return ()=>{
+	    count++;
+	}
+};
+let counter=createcounter();
+console.log(counter);
+console.log(counter());
+console.log(counter());  
+------------------------------------------------------------------------
+//setTimeout(function,seconds)---
+						[1 second=1000]
+setTimeout(function(){
+	console,log("hello world");
+},3000);
+output will be print by after 3 second.-
+
+
+//setInterval function--- 
+
+setInterval(function(){
+	console,log("hello world");
+},3000);
+every three second once call a function.
+
+//ForEach function---
+
+const  values=[1,2,3];
+values.forEach(function(number){
+   console.log(number);
+});
+------------------------------------------------------------------------
+//type of scope in js
+//1. Block scope
+//2. function scope
+
+1.block scope---is code run only inside the bracket{}is not console given outside the bracket.(error)
+
+if(true);
+{
+  let blockscopevariable='HELLO WORLD';
+  console.log(blockscopevariable);
+}
+
+2.function scope---- is an whenever it can be call the function either inside the block or outside the block.
+
+
+function myfunction()
+{
+  functionscopevariable='hello world';
+  console.log(function scopevariable);
+
+  function add()
+  {
+      console.log(function scopevariable);
+  }
+  add();
+}
+myfunction(); 
+
+------------------------------------------------------------------------
+
+//array---foreach,map,slice,splice,concate,sort,fill,includes,join,reverse,push,pop,shift,unshift,indexof,lastindexof,every,some,find,findindex,from,isarray,filter,flat,reduce
+
+
+//  array in foreach(value,index,array)---
+
+
+const number=[1,2,3,4,5,6,7,8,9,10];
+number.foreach((value)=>{
+console.log(value);
+});
+
+const number=[1,2,3,4,5,6,7,8,9,10];
+number.foreach((value,index)=>{
+console.log("index : "+index+"value: "+value);
+});
+
+// example of using the foreach method to create a new array from an existing one:
+
+const doublenumbers=[];
+const value=[1,2,3,4,5];
+value.foreach(number=>{
+   doublenumbers.push(number*2);
+}); 
+console.log(doublenumbers);
+
+// max element of array for using foreach---
+
+let value=[1,2,3,4,5]
+let max=value[0];
+values.foreach(number=>{
+   if(number>max){
+     max=number;
+   }
+});
+
+console.log(max);
+
+
+
+
+ 
+//.isArray is an check the array value
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

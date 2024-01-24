@@ -1,0 +1,185 @@
+//dom--document object model
+
+document--file(html,xml etc...)
+object---tags,element(<h1><div><span> etc.....)
+model---layout structure
+
+
+dom is an specification by w3c(world wild web) c(consodium) 
+
+
+HTML DOM---is a standard object model and programming interface for html and standard for how to get,change,add or delete HTML ELEMENT
+
+
+
+//what is API?
+
+APPLICATION
+
+PROGRAMMING
+
+INTERFACE
+
+
+//windows mostly using method:
+
+
+window.open("https://google.com")
+window.close();
+window.moveTo(500,100);
+window.resizeTo("1000,600");
+window.alert("hello world");
+window.prompt("what is your name?");
+console.log();
+
+
+
+
+//BOM---BROWSER OBJECT MODEL:
+
+refer by w3school
+
+SCREEN
+LOCATION 
+	webpage title name:location.href="https://google.com"
+			location.assign("https://facebook.com")
+
+
+HISTROY
+ 	webpage forward,webpage backward
+
+
+NAVIGATED
+
+
+
+$--interpolation Method
+
+
+
+
+// using DOM method print in webpage 
+
+document.write()
+console.log()
+
+//if any html code change use this method:
+
+
+---assign div in id="" then write a script using id to change an html code
+
+syntax:
+
+<body>
+    <div id="system">
+        <h1>fbjfxnmxnxfb xfnfjnnfj</h1>
+    </div>
+
+    <!-- <script src="calculator.js"></script> -->
+
+    <script>
+        const myproduct = document.getElementById("system")
+        myproduct.innerHTML='<h1>hello everyone</h1>'
+        console.log(myproduct)
+    </script>
+</body>
+
+// image width and height check keyword in js
+
+
+image.offsetwidth---width check
+image.offsetHeight---height check
+
+
+
+//defer vs async
+
+
+defer is the automatic work in parallel by download background. when download will finish thats an execute a code  
+
+
+
+//AddEventListeners
+
+window.AddEventListeners()
+document.AddEventListeners()
+Element.AddEventListeners()
+
+
+
+// get element from form
+
+const formEl=document.forms.feedback;
+
+const fullNameEl= forms.elements.fullName
+const typeEl= forms.elements.type
+const emailEl= forms.elements.emailEl
+const termsEl = forms.elements,terms----terms and condition
+
+
+console.log(fullNameEl,typeEl,emailEl,termsEl)
+
+
+		(OR)
+// object Destructing
+
+const(fullNameEl typeEl emailEl termsEl)=formEl.elements;
+
+console.log(fullNameEl,typeEl,emailEl,termsEl)
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
